@@ -1,6 +1,6 @@
 import argparse
 import xmlschema
-from lxml import etree
+from lxml import etree  # pylint: disable=c-extension-no-member
 
 def validate_and_parse(xml_file: str, xsd_file: str):
     # Load and validate against schema
@@ -16,8 +16,8 @@ def validate_and_parse(xml_file: str, xsd_file: str):
         return
 
     # Parse and extract key info
-    tree = etree.parse(xml_file)
-    root = tree.getroot()
+    tree = etree.parse(xml_file)    # pylint: disable=no-member
+    root = tree.getroot()           # pylint: disable=no-member
 
     ns = {'doc': 'urn:iso:std:iso:20022:tech:xsd:pain.001.001.09'}
 
