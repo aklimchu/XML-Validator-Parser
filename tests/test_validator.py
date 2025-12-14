@@ -1,4 +1,3 @@
-import pytest
 from xml_validator import validate_and_parse
 
 VALID_XML = "tests/valid_example.xml"
